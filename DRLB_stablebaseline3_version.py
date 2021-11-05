@@ -14,8 +14,8 @@ class ConvergeEnv(gym.Env):
         # Example when using discrete actions:
         self.action_space = spaces.Discrete(7)
         # Example for using image as input:
-        self.observation_space = spaces.Box(low=np.float32([1, 0, 0, 0, 0, 0, 0]),
-                                            high=np.float32([96, 1, 1, 1, 1, 1, np.inf]),
+        self.observation_space = spaces.Box(low=np.float32([-np.inf, -np.inf, -np.inf, -np.inf, -np.inf, -np.inf, -np.inf]),
+                                            high=np.float32([np.inf, np.inf, np.inf, np.inf, np.inf, np.inf, np.inf]),
                                             shape=(7,))
         self.train_data = pd.read_csv('数据/1458/train.bid.all.hb.csv')
         self.day = 6
