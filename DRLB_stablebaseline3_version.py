@@ -161,7 +161,7 @@ if __name__ == '__main__':
     env = ConvergeEnv()
     model = DQN(MlpPolicy, env, verbose=1)
     print('start learning')
-    model.learn(total_timesteps=1000)
+    model.learn(total_timesteps=10000)
     print('start')
 
     final_result = []
